@@ -49,6 +49,7 @@ const getImageBuffer = async (imageUrl: string): Promise<Buffer> => {
       })
       .on('error', (e) => {
         console.error(e);
+        reject(e);
       })
       .end();
   });
